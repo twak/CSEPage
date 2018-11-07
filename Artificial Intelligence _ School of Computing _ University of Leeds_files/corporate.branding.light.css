@@ -1,0 +1,312 @@
+﻿/*
+* === GENERAL TYPOGRAPHY ===
+*/
+
+body {
+    color: #51504c;
+}
+
+h1,
+h2,
+h3,
+h4,
+.crmEntityFormView .section-title {
+    font-family: "crimson Text";
+}
+
+h1,
+.page-header h1 {
+    font-size: 42px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2,
+h3,
+h4 {
+    font-size: 26px;
+}
+
+a.text-primary {
+    color: inherit;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover:not(.btn),
+a:focus:not(.btn) {
+    background: none;
+}
+
+ul {
+    line-height: 26px;
+}
+
+
+/*
+* === SITE HEADER ===
+*/
+
+div.site-header__lower {
+    background-color: #b31b1b;
+    padding: 15px;
+}
+
+div.site-header__lower a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div.site-header__lower a:hover {
+    text-decoration: underline;
+}
+
+
+/*
+* === BREADCRUMBS ===
+*/
+
+ul.breadcrumb li a {
+    color: #51504c;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+ul.breadcrumb li.active {
+    color: #b31b1b;
+    font-size: 12px;
+}
+
+
+/*
+* === FORMS ===
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #c9bfb5;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    background-image: none;
+    background-color: #333;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+input.btn.btn-primary {
+    border-radius: 0px;
+    background: #1a1a1a;
+}
+
+label.control-label.required::after {
+    color: #b31b1b;
+}
+
+div.alert {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.alert-danger {
+    background-image: none;
+    border: 1px solid #bc393b;
+    background: #f7e4e4;
+}
+
+div.alert.alert-warning {
+    background-color: #f4f2f0;
+    background-image: none;
+    border: 1px solid #c9bfb5;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+div.alert.alert-warning a {
+    color: #b31b1b;
+    text-decoration: underline;
+}
+
+.crmEntityFormView .section-title {
+    font-size: 30px;
+}
+
+.validation-summary a {
+    color: inherit;
+}
+
+.crmEntityFormView .cell div.info.required label:after {
+    color: #b31b1b;
+}
+
+.crmEntityFormView table.section {
+    padding: 10px;
+    line-height: 26px;
+    background: #f4f2f0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #c9bfb5;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: #aa8f6f;
+    color: #fff;
+    border: 1px solid #c9bfb5;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+    background-color: #fff;
+    background-image: none;
+}
+
+#web-form-navi ol.progress li {
+    background-image: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #e9e5e1;
+    color: inherit;
+    text-shadow: none;
+    border: 1px solid #c9bfb5;
+}
+
+.crmEntityFormView .section:first-child {
+    background: #f4f2f0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #c9bfb5;
+}
+
+.crmEntityFormView .cell div.control span.checkbox {
+    margin-top: 7px;
+}
+
+.crmEntityFormView .cell.boolean-radio-cell input[type="radio"] {
+    margin-top: 6px;
+}
+
+.crmEntityFormView .tab {
+    background: #fff;
+}
+
+a.btn.btn-primary {
+    background-image: none;
+    color: #fff;
+    background-color: #333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+}
+
+a.btn-default {
+    background-image: none;
+    background-color: #333;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.incomplete a {
+    color: #333;
+}
+
+button.close {
+    background: none;
+    color: #333;
+}
+
+#web-form-navi ol.progress li.incomplete {
+    border-left: 4px solid #bc393b;
+}
+
+#web-form-navi ol.progress li.completed a {
+    color: #333;
+}
+
+#web-form-navi ol.progress li.completed {
+    border-left: 5px solid #86b26e;
+}
+
+#web-form-navi ol.progress li.active {
+    background-color: #c9bfb5;
+    color: #fff;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.newsLabel {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.modal-title {
+    font-size: 26px;
+}
+
+.modal-content {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.panel-section {
+    background: #f4f2f0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.pagination>li>a {
+    color: #51504c;
+}

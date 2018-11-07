@@ -1,0 +1,18 @@
+﻿$(document).ready(function () {
+    $('table[data-name="MarketingSection"]').appendTo('#marketingSection');
+
+    $(".site-title .xrm-attribute-value").hide();
+
+    $('#ContentContainer_MainContent_ContactFormView_emailaddress2').bind("cut copy paste", function (e) {
+        alert("Paste function not supported in this field. Please enter by typing. ");
+        e.preventDefault();
+    });
+
+    $(window).keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+});
