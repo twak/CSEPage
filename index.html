@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths tablesaw-enhanced wf-freightsanspro-n4-active wf-freightsanspro-i4-active wf-freightsanspro-n6-active wf-freightsanspro-i6-active wf-freighttextpro-n4-active wf-freighttextpro-i4-active wf-freighttextpro-n6-active wf-freighttextpro-i6-active wf-freightdisplaypro-n4-active wf-freightdisplaypro-i4-active wf-freightdisplaypro-n6-active wf-freightdisplaypro-i6-active wf-active" lang="en" style="">
+    <!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="http://www.jadu.co.uk">
+        <meta name="robots" content="index,follow">
+        <meta name="revisit-after" content="2 days">
+        <meta name="author" content="Engineering">
+        <meta name="publisher" content="University of Leeds">
+        <!-- Dublin Core Metadata -->
+        <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+        <meta name="dcterms.creator" lang="en" content="Sam Miles">
+        <meta name="dcterms.created" lang="en" content="2017-03-01">
+        <meta name="dcterms.modified" lang="en" content="2017-03-01">
+        <meta name="dcterms.description" lang="en" content="Research in Computational Science and Engineering at the University of Leeds">
+        <meta name="dcterms.format" lang="en" content="text/html">
+        <meta name="dcterms.identifier" content="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence">
+        <meta name="dcterms.language" content="en">
+        <meta name="dcterms.publisher" lang="en" content="University of Leeds">
+        <meta name="dcterms.rights" lang="en" content="Copyright University of Leeds">
+        <meta name="dcterms.title" lang="en" content="Computational Science and Engineering">
+        <meta name="dcterms.coverage" lang="en" content="UK">
+        <!-- /Dublin Core Metadata -->
+        <meta name="Keywords" content="">
+        <meta name="Description" content="Research in Computational Science and Engineering at the University of Leeds">
+        <!-- Metadata Twitter -->
+        <meta name="twitter:card" content="summary">
+        <!--this is static-->
+        <meta name="twitter:site" content="@LeedsUniEng">
+        <meta name="twitter:title" content="Computational Science and Engineering">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+        <meta name="twitter:url" content="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence">
+        <!-- /Metadata Twitter -->
+        <!-- Open Graph Protocol Metadata -->
+        <meta property="og:title" content="Computational Science and Engineering">
+        <meta property="og:type" content="website">
+        <!--this is static-->
+        <meta property="og:url" content="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence">
+        <meta property="og:image" content="">
+        <!-- Open Graph Protocol Metadata -->
+        <title>Computational Science and Engineering | School of Computing | University of Leeds
+</title>
+        <!-- Google Tag Manager -->
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/yos6uow.js.download" type="text/javascript" async=""></script>
+        <script async="" src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/gtm.js.download"></script>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0]
+                  , j = d.createElement(s)
+                  , dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            )(window, document, 'script', 'dataLayer', 'GTM-WJPZM2T');
+        </script>
+        <!-- End Google Tag Manager -->
+        <!-- Include JS -->
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/modernizr.min.js.download"></script>
+        <!-- Include Favicon -->
+        <link rel="icon" type="image/png" href="data:image/vndmicrosofticon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAABkAAAAZAAPlsXdAAAACXZwQWcAAAAgAAAAIACH+pydAAABKklEQVRIx81V0ZGFIAwkjP/SiXRgZ4YOLcESqMDkfeRNjgGPuwe5mfPDUcDdZDeJzv3nCwDa12rRAPcR3YxmXdeUUghBVmyS0O9DCOd5MvN1XTFGS90BIMaYc2ZmImLmnPO2bX/i7ePWrEqIKIHLXa99342F+jFFGICWYNstZtZCmg1fCAAAEZ1zx3Eoh40TEiwRISIiCq5YUss4TDBQYx+glwSl4WUSsrKYcFTSWWYgJqeUqi2l8TMGSLzic2WMPvuZUfGdUOXJZaaKpK3KhNpjy7wfnR8cM4NtE+i0eKMPVJQOzsePdb6OD7vOyHuk9GMZ3Pf9BeF9xUpEU31QzUuF04TK0vLzLV3CGUjUzv1+r81K1EcfJGj/KsYEWja/OmzbyTYElQF9vhd+J/1iV0kY4AAAABp6VFh0SlBFRy1Db2xvcnNwYWNlAAB42jMCAAAzADMRFn5jAAAAJXpUWHRKUEVHLVNhbXBsaW5nLWZhY3RvcnMAAHjaM6ww1DGEYAARbwLnIJ7wIwAAAABJRU5ErkJggg==">
+        <!-- Typekit Fonts Async -->
+        <script type="text/javascript">
+            if (document.getElementsByTagName("html")[0].className.indexOf("lt-ie9") == -1) {
+                !function(e, t, n, a, r, c, l, s, o) {
+                    l = a[r],
+                    l && (s = e.createElement("style"),
+                    s.innerHTML = l,
+                    e.getElementsByTagName("head")[0].appendChild(s),
+                    e.documentElement.className += " wf-cached"),
+                    o = t[n],
+                    t[n] = function(e, p, u, i) {
+                        if ("string" == typeof p && p.indexOf(c) > -1) {
+                            try {
+                                u = new XMLHttpRequest,
+                                u.open("GET", p, !0),
+                                u.onreadystatechange = function() {
+                                    try {
+                                        4 == u.readyState && (i = u.responseText.replace(/url\(\//g, "url(" + c + "/"),
+                                        i !== l && (a[r] = i))
+                                    } catch (e) {
+                                        s && (s.innerHTML = "")
+                                    }
+                                }
+                                ,
+                                u.send(null)
+                            } catch (d) {}
+                            t[n] = o
+                        }
+                        return o.apply(this, arguments)
+                    }
+                }(document, Element.prototype, "setAttribute", localStorage, "tk", "https://use.typekit.net");
+            }
+
+            (function() {
+                var config = {
+                    kitId: 'yos6uow'
+                };
+                var d = false;
+                var tk = document.createElement('script');
+                tk.src = '//use.typekit.net/' + config.kitId + '.js';
+                tk.type = 'text/javascript';
+                tk.async = 'true';
+                tk.onload = tk.onreadystatechange = function() {
+                    var rs = this.readyState;
+                    if (d || rs && rs != 'complete' && rs != 'loaded')
+                        return;
+                    d = true;
+                    try {
+                        Typekit.load(config);
+                    } catch (e) {}
+                }
+                ;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(tk, s);
+            }
+            )();
+        </script>
+        <link href="./Artificial Intelligence _ School of Computing _ University of Leeds_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="./Artificial Intelligence _ School of Computing _ University of Leeds_files/toolkit.min.css" rel="stylesheet" type="text/css">
+        <link href="./Artificial Intelligence _ School of Computing _ University of Leeds_files/cookies.min.css" rel="stylesheet" type="text/css">
+        <link href="./Artificial Intelligence _ School of Computing _ University of Leeds_files/print.min.css" rel="stylesheet" media="print">
+        <style type="text/css">
+            .tk-freight-sans-pro {
+                font-family: "freight-sans-pro",sans-serif;
+            }
+
+            .tk-freight-text-pro {
+                font-family: "freight-text-pro",sans-serif;
+            }
+
+            .tk-freight-display-pro {
+                font-family: "freight-display-pro",sans-serif;
+            }
+        </style>
+        <style type="text/css">
+            @font-face {
+                font-family: freight-sans-pro;
+                src: url(https://use.typekit.net/af/442215/000000000000000000010b5a/27/l?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/442215/000000000000000000010b5a/27/d?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/442215/000000000000000000010b5a/27/a?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-sans-pro;
+                src: url(https://use.typekit.net/af/3df5fe/000000000000000000010b5b/27/l?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/3df5fe/000000000000000000010b5b/27/d?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/3df5fe/000000000000000000010b5b/27/a?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: freight-sans-pro;
+                src: url(https://use.typekit.net/af/cef9f3/000000000000000000010b5e/27/l?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/cef9f3/000000000000000000010b5e/27/d?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/cef9f3/000000000000000000010b5e/27/a?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=n6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-sans-pro;
+                src: url(https://use.typekit.net/af/2a72d2/000000000000000000010b5f/27/l?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/2a72d2/000000000000000000010b5f/27/d?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/2a72d2/000000000000000000010b5f/27/a?primer=df5153eacced704827368334f0ea4fc7be0035b96c95b00c8267a3ef714b0423&fvd=i6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: freight-text-pro;
+                src: url(https://use.typekit.net/af/ac6334/000000000000000000012059/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/ac6334/000000000000000000012059/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/ac6334/000000000000000000012059/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-text-pro;
+                src: url(https://use.typekit.net/af/5464d5/00000000000000000001205a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/5464d5/00000000000000000001205a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/5464d5/00000000000000000001205a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: freight-text-pro;
+                src: url(https://use.typekit.net/af/294d74/00000000000000000001210a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/294d74/00000000000000000001210a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/294d74/00000000000000000001210a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-text-pro;
+                src: url(https://use.typekit.net/af/75d1db/00000000000000000001210b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/75d1db/00000000000000000001210b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/75d1db/00000000000000000001210b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: freight-display-pro;
+                src: url(https://use.typekit.net/af/f15774/0000000000000000000132cf/27/l?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/f15774/0000000000000000000132cf/27/d?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/f15774/0000000000000000000132cf/27/a?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-display-pro;
+                src: url(https://use.typekit.net/af/51f389/0000000000000000000132d0/27/l?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/51f389/0000000000000000000132d0/27/d?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/51f389/0000000000000000000132d0/27/a?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i4&v=3) format("opentype");
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: freight-display-pro;
+                src: url(https://use.typekit.net/af/f7ad2c/0000000000000000000132d5/27/l?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/f7ad2c/0000000000000000000132d5/27/d?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/f7ad2c/0000000000000000000132d5/27/a?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=n6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: freight-display-pro;
+                src: url(https://use.typekit.net/af/c11e4e/0000000000000000000132d6/27/l?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/c11e4e/0000000000000000000132d6/27/d?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/c11e4e/0000000000000000000132d6/27/a?primer=aa29797211f8def197706c36c7e87c1474d44b659811b3be094f342cc243ab03&fvd=i6&v=3) format("opentype");
+                font-weight: 600;
+                font-style: italic;
+            }
+        </style>
+        <style type="text/css">
+            [responsive-image] > img, [data-responsive-image] {
+                overflow: hidden;
+                padding: 0;
+            }
+
+            [responsive-image] > img, [data-responsive-image] > img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body class="">
+        <div class="cc-revoke cc-bottom cc-animate" style="display: none;">Cookie Policy</div>
+        <div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-invisible" style="display: none;">
+            <!--googleoff: all-->
+            <div class="cookie-heading">
+                <h2>Cookies</h2>
+            </div>
+            <div class="cookie-consent" id="cookieconsent:desc">We use cookies to ensure you have the best browsing experience, to help us improve our website and for targeted advertising. By continuing to browse the site you are agreeing to our use of cookies.</div>
+            <div class="cookie-settings">
+                <form>
+                    <div class="settings-heading">
+                        <h2>Cookie Settings</h2>
+                        <div class="form-group">
+                            <a tabindex="0" class="btn btn-wide btn-brand-2 settings-dismiss">Save settings</a>
+                        </div>
+                    </div>
+                    <div class="settings-form">
+                        <h2>Strictly necessary cookies</h2>
+                        <p>These cookies are essential so that you can move around the website and use its features. Without these cookies services you have asked for cannot be provided.</p>
+                        <h2>
+                            <label class="switch">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                            Third-party cookies
+                        
+                        </h2>
+                        <div class="settings-indiv">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="google-checkbox" value="google" checked="">Google cookies help us track use of our website and make improvements.
+                                
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="fb-checkbox" value="facebook" checked="">Facebook uses cookies to retarget you with personalised advertising after you have visited our website.
+                                
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="cc-compliance">
+                <a aria-label="dismiss cookie message" tabindex="0" class="cc-btn cc-dismiss">Accept</a>
+                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence#" class="cc-settings">Settings</a>
+                <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="https://engineering.leeds.ac.uk/privacy/" target="_blank">Find out more</a>
+            </div>
+            <!--googleon: all-->
+        </div>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJPZM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="site-container">
+            <nav id="quicklinks" class="quicklinks collapse" role="navigation" aria-expanded="false">
+                <div class="wrapper-lg wrapper-relative">
+                    <div class="quicklinks-inner">
+                        <div class="tk-row">
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">For staff</li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/forstaff/">For Staff</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/forstaff/homepage/375/services">Services A-Z</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ses.leeds.ac.uk/">Student Education Service</a>
+                                    </li>
+                                </ul>
+                                <ul class="quicklinks-list">
+                                    <li class="title">For students</li>
+                                    <li>
+                                        <a href="https://minerva.leeds.ac.uk/">Minerva</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://it.leeds.ac.uk/mobileapps">Mobile app</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://students.leeds.ac.uk/">For Students</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">Faculties</li>
+                                    <li>
+                                        <a href="https://ahc.leeds.ac.uk/">Faculty of Arts, Humanities and Cultures</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://biologicalsciences.leeds.ac.uk/">Faculty of Biological Sciences</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://business.leeds.ac.uk/">Faculty of Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.essl.leeds.ac.uk/">Faculty of Education, Social Sciences and Law</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/">Faculty of Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.environment.leeds.ac.uk/">Faculty of Environment</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://physicalsciences.leeds.ac.uk/">Faculty of Mathematics and Physical Sciences</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://medhealth.leeds.ac.uk/">Faculty of Medicine and Health</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.llc.leeds.ac.uk/">Lifelong Learning Centre</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.leeds.ac.uk/info/130567/language_centre">Language Centre</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">Other</li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/staffaz">Staff A-Z</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/campusmap">Campus map</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/jobs">Jobs</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.alumni.leeds.ac.uk/">Alumni</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/contact">Contacts</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://library.leeds.ac.uk/">Library</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://it.leeds.ac.uk/">IT</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://video.leeds.ac.uk/">VideoLeeds</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.luu.org.uk/">Leeds University Union</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">Follow us</li>
+                                    <li>
+                                        <a href="http://www.facebook.com/universityofleeds">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.twitter.com/universityleeds">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.youtube.com/universityofleeds">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.linkedin.com/edu/university-of-leeds-12706">LinkedIn</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://instagram.com/universityofleeds/">Instagram</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://itunes.apple.com/gb/institution/university-of-leeds/id610001825">ITunes U</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3"></div>
+                        </div>
+                    </div>
+                    <div class="quicklinks-close">
+                        <button class="icon-font btn-icon js-quicklinks-close collapsed" data-toggle="collapse" data-target="#quicklinks" aria-expanded="false">
+                            <span class="tk-icon-close" aria-hidden="true"></span>
+                            <span class="icon-font-text">Close quicklinks</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <!-- $MASTHEAD-->
+            <header class="masthead" role="banner">
+                <div class="wrapper-lg">
+                    <div class="masthead-links">
+                        <button class="masthead-link masthead-link-quicklinks js-quicklinks-toggle collapsed" data-toggle="collapse" data-target="#quicklinks" aria-expanded="false">Quicklinks</button>
+                        <!--    <a href="#" class="masthead-link">Terms</a>
+            <a href="#" class="masthead-link">Accessibility</a>
+            <a href="#" class="masthead-link">Other</a> -->
+                    </div>
+                    <div class="navicon">
+                        <button class="btn-icon" data-state="body-state" data-class="state-navicon-active">Menu</button>
+                    </div>
+                    <div class="logo">
+                        <!-- Usese data uri instead of paths -->
+                        <a class="logo-full" href="https://www.leeds.ac.uk/">
+                            <img data-uri="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCAxODMgNTMiPjxnIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj48dGl0bGU+R3JvdXA8L3RpdGxlPjxwYXRoIGQ9Ik05IDQ3LjVjMCAuNy0uMSAxLjMtLjQgMS44LS41LjktMS4zIDEuMy0yLjUgMS4zcy0yLjEtLjUtMi42LTEuM2MtLjItLjUtLjMtMS4xLS4zLTEuOHYtOEguNHY4LjJjMCAxLjEuMiAyIC42IDIuNy45IDEuNyAyLjYgMi41IDUuMSAyLjVzNC4yLS44IDUuMS0yLjVjLjQtLjcuNi0xLjYuNi0yLjd2LTguMkg5djh6TTIzLjMgNDZoLjF2Mi4yYy0uNC0uNS0uOC0xLjEtMS40LTEuOGwtNS4zLTYuOUgxNHYxMy4yaDIuN3YtNy4xYzAtLjYgMC0xLjUtLjEtMS45LjUuNi45IDEuMiAxLjQgMS44bDUuNSA3LjJIMjZWMzkuNWgtMi43VjQ2em01LjEtNi41aDIuN3YxMy4yaC0yLjd6bTExLjIgNi44Yy0uNCAxLS43IDEuOS0uOSAyLjYtLjMtLjgtLjYtMS42LS45LTIuNkwzNSAzOS41aC0yLjlsNS40IDEzLjNoMi4zbDUuNC0xMy4zaC0yLjlsLTIuNyA2Ljh6bTEzLjMtNC41bC43LTIuM0g0NnYxMy4yaDcuNnYtMi40aC00Ljh2LTMuMmg0LjF2LTIuM2gtNC4xdi0zem04LjggNC45YzEuNS0uNSAyLjYtMS43IDIuNi0zLjQgMC0xLjQtLjYtMi43LTIuMS0zLjMtLjctLjMtMS42LS41LTIuOC0uNWgtMy45djEzLjJoMi43di01aDFjLjMuMS44LjYgMS40IDEuOGwxLjcgMy4yaDMuMWwtMi4xLTMuOGMtLjYtMS4yLTEuMi0yLTEuNi0yLjJ6bS0xLjEtMS41Yy0uMy4yLS43LjMtMS4zLjNoLTF2LTMuOGgxYy42IDAgMSAuMSAxLjMuMy42LjMuOS45LjkgMS42cy0uNCAxLjMtLjkgMS42em05LjEtMi4zYzAtLjkuNy0xLjIgMS42LTEuMiAxLjEgMCAyLjEuMyAzLjMuOVY0MGMtLjgtLjQtMS45LS43LTMuMy0uNy0yLjggMC00LjQgMS44LTQuNCAzLjggMCA0IDUuNiAzLjcgNS42IDYuMSAwIDEtMSAxLjQtMiAxLjQtMS4yIDAtMi4yLS40LTMtMWwtMSAyLjFjMS4xLjggMi42IDEuMiA0LjEgMS4yIDIuOCAwIDQuOS0xLjUgNC45LTMuOS0uMi00LjItNS44LTMuOS01LjgtNi4xem03LjMtMy40aDIuN3YxMy4ySDc3em0zLjYgMi4zaDMuOXYxMC45aDIuN1Y0MS44aDMuNWwuNy0yLjNIODAuNnptMTcuMSAzLjNoLS4xbC0yLjktNS42aC0zbDQuNiA3Ljl2NS4zSDk5di01LjJsNC42LThoLTN6bTE1LjMtNS44Yy00IDAtNi43IDIuOC02LjcgNi44czIuOCA2LjggNi43IDYuOCA2LjctMi43IDYuNy02LjhjMC00LTIuOC02LjgtNi43LTYuOHptMCAxMS4zYy0yLjMgMC0zLjgtMS42LTMuOC00LjVzMS41LTQuNSAzLjgtNC41IDMuOCAxLjYgMy44IDQuNS0xLjYgNC41LTMuOCA0LjV6bTguNCAyLjFoMi43di01LjZoNC4ydi0yLjNoLTQuMnYtM2g0LjJsLjctMi4zaC03LjZ6bTE1LjctMTMuMmgtMi44djEzLjJoNy40di0yLjRoLTQuNnptMTMuMiAyLjNsLjctMi4zaC03LjZ2MTMuMmg3LjZ2LTIuNGgtNC45di0zLjJoNC4ydi0yLjNoLTQuMnYtM3ptOS40IDBsLjctMi4zaC03LjZ2MTMuMmg3LjZ2LTIuNGgtNC45di0zLjJoNC4ydi0yLjNoLTQuMnYtM3ptNi42LTIuM2gtNC40djEzLjJoNC4yYzQuNSAwIDcuNS0yLjYgNy41LTYuNyAwLTQtMi42LTYuNS03LjMtNi41em0tLjIgMTAuOGgtMS41di04LjVoMS40YzMgMCA0LjYgMS42IDQuNiA0LjIuMSAyLjQtMS4yIDQuMy00LjUgNC4zem0xMS4xLTcuNGMwLS45LjctMS4yIDEuNi0xLjIgMS4xIDAgMi4xLjMgMy4zLjlWNDBjLS44LS40LTEuOS0uNy0zLjMtLjctMi44IDAtNC40IDEuOC00LjQgMy44IDAgNCA1LjYgMy43IDUuNiA2LjEgMCAxLTEgMS40LTIgMS40LTEuMiAwLTIuMi0uNC0zLTFsLTEgMi4xYzEuMS44IDIuNiAxLjIgNC4xIDEuMiAyLjggMCA0LjktMS41IDQuOS0zLjktLjEtNC4yLTUuOC0zLjktNS44LTYuMXpNMTc1IDEyaDF2LTFoMXYtMWgtMnptMCA4aDF2LTRoMXYtMWgtMnptLTUtN2g3djFoLTd6bTIuNSA3aDF2LTRoMXYtMWgtMnptMS05aDF2LTFoLTJ2Mmgxem0tMi41IDBoMXYtMWgtMnYyaDF6bS0xIDloMXYtNGgxdi0xaC0yem0yIDRoMXYxaC0xem0xIDFoMXYxaC0xem0xLTFoMXYxaC0xem0tMS0xaDF2MWgtMXpNMTUxIDB2MzJoMTZ2LTloM3Y5aDFWMjJoNXYxMGgxdi05aDN2OWgzVjBoLTMyem0yMi42IDNsMy40IDNoLTdsMy42LTN6bS00LjEgMy45aDcuOWwuMSAxLjFoLThWNi45ek0xODAgMjJoLTN2LTFoLTd2MWgtM3YtMWgxdi04aDFWOWg5djMuOWgxdjhoMVYyMnoiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+" class="js-png-svg-uri" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCAxODMgNTMiPjxnIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj48dGl0bGU+R3JvdXA8L3RpdGxlPjxwYXRoIGQ9Ik05IDQ3LjVjMCAuNy0uMSAxLjMtLjQgMS44LS41LjktMS4zIDEuMy0yLjUgMS4zcy0yLjEtLjUtMi42LTEuM2MtLjItLjUtLjMtMS4xLS4zLTEuOHYtOEguNHY4LjJjMCAxLjEuMiAyIC42IDIuNy45IDEuNyAyLjYgMi41IDUuMSAyLjVzNC4yLS44IDUuMS0yLjVjLjQtLjcuNi0xLjYuNi0yLjd2LTguMkg5djh6TTIzLjMgNDZoLjF2Mi4yYy0uNC0uNS0uOC0xLjEtMS40LTEuOGwtNS4zLTYuOUgxNHYxMy4yaDIuN3YtNy4xYzAtLjYgMC0xLjUtLjEtMS45LjUuNi45IDEuMiAxLjQgMS44bDUuNSA3LjJIMjZWMzkuNWgtMi43VjQ2em01LjEtNi41aDIuN3YxMy4yaC0yLjd6bTExLjIgNi44Yy0uNCAxLS43IDEuOS0uOSAyLjYtLjMtLjgtLjYtMS42LS45LTIuNkwzNSAzOS41aC0yLjlsNS40IDEzLjNoMi4zbDUuNC0xMy4zaC0yLjlsLTIuNyA2Ljh6bTEzLjMtNC41bC43LTIuM0g0NnYxMy4yaDcuNnYtMi40aC00Ljh2LTMuMmg0LjF2LTIuM2gtNC4xdi0zem04LjggNC45YzEuNS0uNSAyLjYtMS43IDIuNi0zLjQgMC0xLjQtLjYtMi43LTIuMS0zLjMtLjctLjMtMS42LS41LTIuOC0uNWgtMy45djEzLjJoMi43di01aDFjLjMuMS44LjYgMS40IDEuOGwxLjcgMy4yaDMuMWwtMi4xLTMuOGMtLjYtMS4yLTEuMi0yLTEuNi0yLjJ6bS0xLjEtMS41Yy0uMy4yLS43LjMtMS4zLjNoLTF2LTMuOGgxYy42IDAgMSAuMSAxLjMuMy42LjMuOS45LjkgMS42cy0uNCAxLjMtLjkgMS42em05LjEtMi4zYzAtLjkuNy0xLjIgMS42LTEuMiAxLjEgMCAyLjEuMyAzLjMuOVY0MGMtLjgtLjQtMS45LS43LTMuMy0uNy0yLjggMC00LjQgMS44LTQuNCAzLjggMCA0IDUuNiAzLjcgNS42IDYuMSAwIDEtMSAxLjQtMiAxLjQtMS4yIDAtMi4yLS40LTMtMWwtMSAyLjFjMS4xLjggMi42IDEuMiA0LjEgMS4yIDIuOCAwIDQuOS0xLjUgNC45LTMuOS0uMi00LjItNS44LTMuOS01LjgtNi4xem03LjMtMy40aDIuN3YxMy4ySDc3em0zLjYgMi4zaDMuOXYxMC45aDIuN1Y0MS44aDMuNWwuNy0yLjNIODAuNnptMTcuMSAzLjNoLS4xbC0yLjktNS42aC0zbDQuNiA3Ljl2NS4zSDk5di01LjJsNC42LThoLTN6bTE1LjMtNS44Yy00IDAtNi43IDIuOC02LjcgNi44czIuOCA2LjggNi43IDYuOCA2LjctMi43IDYuNy02LjhjMC00LTIuOC02LjgtNi43LTYuOHptMCAxMS4zYy0yLjMgMC0zLjgtMS42LTMuOC00LjVzMS41LTQuNSAzLjgtNC41IDMuOCAxLjYgMy44IDQuNS0xLjYgNC41LTMuOCA0LjV6bTguNCAyLjFoMi43di01LjZoNC4ydi0yLjNoLTQuMnYtM2g0LjJsLjctMi4zaC03LjZ6bTE1LjctMTMuMmgtMi44djEzLjJoNy40di0yLjRoLTQuNnptMTMuMiAyLjNsLjctMi4zaC03LjZ2MTMuMmg3LjZ2LTIuNGgtNC45di0zLjJoNC4ydi0yLjNoLTQuMnYtM3ptOS40IDBsLjctMi4zaC03LjZ2MTMuMmg3LjZ2LTIuNGgtNC45di0zLjJoNC4ydi0yLjNoLTQuMnYtM3ptNi42LTIuM2gtNC40djEzLjJoNC4yYzQuNSAwIDcuNS0yLjYgNy41LTYuNyAwLTQtMi42LTYuNS03LjMtNi41em0tLjIgMTAuOGgtMS41di04LjVoMS40YzMgMCA0LjYgMS42IDQuNiA0LjIuMSAyLjQtMS4yIDQuMy00LjUgNC4zem0xMS4xLTcuNGMwLS45LjctMS4yIDEuNi0xLjIgMS4xIDAgMi4xLjMgMy4zLjlWNDBjLS44LS40LTEuOS0uNy0zLjMtLjctMi44IDAtNC40IDEuOC00LjQgMy44IDAgNCA1LjYgMy43IDUuNiA2LjEgMCAxLTEgMS40LTIgMS40LTEuMiAwLTIuMi0uNC0zLTFsLTEgMi4xYzEuMS44IDIuNiAxLjIgNC4xIDEuMiAyLjggMCA0LjktMS41IDQuOS0zLjktLjEtNC4yLTUuOC0zLjktNS44LTYuMXpNMTc1IDEyaDF2LTFoMXYtMWgtMnptMCA4aDF2LTRoMXYtMWgtMnptLTUtN2g3djFoLTd6bTIuNSA3aDF2LTRoMXYtMWgtMnptMS05aDF2LTFoLTJ2Mmgxem0tMi41IDBoMXYtMWgtMnYyaDF6bS0xIDloMXYtNGgxdi0xaC0yem0yIDRoMXYxaC0xem0xIDFoMXYxaC0xem0xLTFoMXYxaC0xem0tMS0xaDF2MWgtMXpNMTUxIDB2MzJoMTZ2LTloM3Y5aDFWMjJoNXYxMGgxdi05aDN2OWgzVjBoLTMyem0yMi42IDNsMy40IDNoLTdsMy42LTN6bS00LjEgMy45aDcuOWwuMSAxLjFoLThWNi45ek0xODAgMjJoLTN2LTFoLTd2MWgtM3YtMWgxdi04aDFWOWg5djMuOWgxdjhoMVYyMnoiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+">
+                        </a>
+                        <a class="logo-mark" href="https://engineering.leeds.ac.uk/">
+                            <img data-uri="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48ZyBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxMmgxdi0xaDF2LTFoLTJ6TTI0IDIwaDF2LTRoMXYtMWgtMnpNMTkgMTNoN3YxaC03ek0yMS41IDIwaDF2LTRoMXYtMWgtMnpNMjIuNSAxMWgxdi0xaC0ydjJoMXpNMjAgMTFoMXYtMWgtMnYyaDF6TTE5IDIwaDF2LTRoMXYtMWgtMnpNMjEgMjRoMXYxaC0xek0yMiAyNWgxdjFoLTF6TTIzIDI0aDF2MWgtMXpNMjIgMjNoMXYxaC0xeiIvPjxwYXRoIGQ9Ik0wIDB2MzJoMTZ2LTloM3Y5aDFWMjJoNXYxMGgxdi05aDN2OWgzVjBIMHptMjIuNiAzTDI2IDZoLTdsMy42LTN6bS00LjEgMy45aDcuOWwuMSAxLjFoLThWNi45ek0yOSAyMmgtM3YtMWgtN3YxaC0zdi0xaDF2LThoMVY5aDl2My45aDF2OGgxVjIyeiIvPjwvZz48L3N2Zz4=" class="js-png-svg-uri" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48ZyBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yNCAxMmgxdi0xaDF2LTFoLTJ6TTI0IDIwaDF2LTRoMXYtMWgtMnpNMTkgMTNoN3YxaC03ek0yMS41IDIwaDF2LTRoMXYtMWgtMnpNMjIuNSAxMWgxdi0xaC0ydjJoMXpNMjAgMTFoMXYtMWgtMnYyaDF6TTE5IDIwaDF2LTRoMXYtMWgtMnpNMjEgMjRoMXYxaC0xek0yMiAyNWgxdjFoLTF6TTIzIDI0aDF2MWgtMXpNMjIgMjNoMXYxaC0xeiIvPjxwYXRoIGQ9Ik0wIDB2MzJoMTZ2LTloM3Y5aDFWMjJoNXYxMGgxdi05aDN2OWgzVjBIMHptMjIuNiAzTDI2IDZoLTdsMy42LTN6bS00LjEgMy45aDcuOWwuMSAxLjFoLThWNi45ek0yOSAyMmgtM3YtMWgtN3YxaC0zdi0xaDF2LThoMVY5aDl2My45aDF2OGgxVjIyeiIvPjwvZz48L3N2Zz4=">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!-- /$MASTHEAD-->
+            <!-- $SITESEARCH-->
+            <div id="sitesearch" class="site-search collapse" aria-expanded="false">
+                <div class="wrapper-lg wrapper-padded">
+                    <form class="site-search-inner" action="https://engineering.leeds.ac.uk/site/custom_scripts/search-results.php" role="search">
+                        <input id="cid" name="cid" type="hidden" value="201552">
+                        <label class="sr-only" for="searchInput">Search</label>
+                        <input id="searchInput" class="site-search-input" type="search" name="query" placeholder="Search" autocomplete="off">
+                        <label class="sr-only" for="searchOption">Destination</label>
+                        <select id="searchOption" class="site-search-select js-action-toggle" name="searchOption">
+                            <option value="searchSite" selected="" data-action="//engineering.leeds.ac.uk/site/custom_scripts/search-results.php">Faculty of Engineering site</option>
+                            <option value="searchAll" data-action="//engineering.leeds.ac.uk/site/custom_scripts/search-results.php">All leeds.ac.uk sites</option>
+                            <!--<optgroup label="Engineering courses">
+                    <option value="UG" data-action="//courses.leeds.ac.uk/course-search">Undergraduate</option>
+                    <option value="PGT" data-action="//courses.leeds.ac.uk/course-search">Postgraduate taught</option>
+                    <option value="PGR" data-action="//courses.leeds.ac.uk/course-search">Postgraduate research</option>
+                </optgroup>-->
+                        </select>
+                        <input class="site-search-submit btn btn-primary" type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+            <!-- /$SITESEARCH-->
+            <!-- $LOCALHEADER-->
+            <div class="local-header">
+                <div class="wrapper-lg wrapper-padded">
+                    <div class="local-header-inner">
+                        <div class="local-header-title">
+                            <h1>
+                                <a href="https://engineering.leeds.ac.uk/info/20132/school_of_computing">School of Computing</a>
+                            </h1>
+                        </div>
+                        <div class="local-header-search">
+                            <button class="icon-font sm-toggle-search btn-icon js-site-search-toggle collapsed" data-toggle="collapse" data-target="#sitesearch" aria-expanded="false">
+                                <span class="site-search-btn" aria-hidden="true"></span>
+                                <span class="icon-font-text">Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /$LOCALHEADER-->
+            <nav class="tk-nav tk-nav-priority" role="navigation">
+                <div class="wrapper-lg wrapper-pd-xxs pos-r">
+                    <div class="tk-nav-header">
+                        <button class="btn-icon" data-state="body-state" data-class="state-navicon-active">Close</button>
+                    </div>
+                    <div class="tk-nav-inner">
+                        <ul class="tk-nav-list tk-nav-list-primary">
+                            <li>
+                                <a href="https://engineering.leeds.ac.uk/info/20132/school_of_computing">Home</a>
+                            </li>
+                            <li class="tk-nav-dropdown">
+                                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence#drop_01">Study</a>
+                                <ul id="drop_01" style="">
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201362/undergraduate">Undergraduate</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201322/masters">Masters</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201323/research_degrees">Research degrees</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/20132/school_of_computing/136/swjtu-leeds_joint_school">SWJTU-Leeds Joint School</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://engineering.leeds.ac.uk/homepage/25/research_and_innovation">Research and Innovation</a>
+                            </li>
+                            <li>
+                                <a href="http://engineering.leeds.ac.uk/homepage/54/working_with_business">Working with business</a>
+                            </li>
+                            <li>
+                                <a href="http://engineering.leeds.ac.uk/site/custom_scripts/staff_profile_list.php?categoryID=20132">People</a>
+                            </li>
+                            <li>
+                                <a href="http://engineering.leeds.ac.uk/info/20132/school_of_computing/138/contact_us">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="main">
+                <div class="wrapper-lg">
+                    <div class="wrapper-pd">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="https://engineering.leeds.ac.uk/">Faculty of Engineering</a>
+                            </li>
+                            <li>
+                                <a href="https://engineering.leeds.ac.uk/info/20132/school_of_computing">School of Computing</a>
+                            </li>
+                            <li>
+                                <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation">Research and innovation</a>
+                            </li>
+                            <li>Our research</li>
+                            <li class="active">Computational Science and Engineering</li>
+                        </ol>
+                    </div>
+                    <div class="column-container">
+                        <aside class="column-container-secondary" role="complementary">
+                            <button class="sidebar-button js-sidebar-trigger">In this section: Research and innovation</button>
+                            <div class="sidebar-body">
+                                <h4 class="sidebar-heading heading-related">In this section</h4>
+                                <ul id="sidebarNav" class="sidebar-nav">
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation">Overview</a>
+                                    </li>
+                                    <li class="dropdown open">
+                                        <a href="https://engineering.leeds.ac.uk/info/201552/our_research#201552">Our research</a>
+                                        <ul id="201552">
+                                            <li>
+                                                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/183/overview">Overview</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/272/artificial_intelligence">Computational Science and Engineering</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/293/algorithms_and_complexity">Algorithms and Complexity</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://engineering.leeds.ac.uk/info/201552/our_research/294/distributed_systems_and_services">Distributed Systems and Services</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation/256/recent_grants">Recent grants</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation/133/research_facilities">Research facilities</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation/14/our_reputation">Our reputation</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/info/201325/research_and_innovation/55/women_in_engineering_and_computing">Women in engineering and computing</a>
+                                    </li>
+                                </ul>
+                                <ul class="sidebar-list sidebar-cta">
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/events?query=&amp;mmyyyy=&amp;categoryID=20132&amp;type=201475">
+                                            <span class="tk-icon-triangle-right"></span>
+                                            Attend an event
+                                        
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/news?query=&amp;mmyyyy=&amp;categoryID=20132">
+                                            <span class="tk-icon-triangle-right"></span>
+                                            Latest news
+                                        
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/info/201323/research_degrees">
+                                            <span class="tk-icon-triangle-right"></span>
+                                            Research degrees
+                                        
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="column-container-primary">
+                            <header class="wrapper-pd wrapper-sm">
+                                <h1 class="heading-underline">Computational Science and Engineering</h1>
+                            </header>
+                            <div class="wrapper-sm wrapper-pd">
+                                <img class="img-featured" src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/800x400_artificial_intelligence.jpg" alt="Computational Science and Engineering">
+                                <div class="cms">
+                                    <p>Our research focuses on analysis and implementation of fast, efficient and reliable numerical algorithms for computational simulation of physical problems, and on the challenge of scale in scientific and information visualization. The main research groups in CSE at Leeds are:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <a href="#sc">Scientific computation</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://hpg.leeds.ac.uk">High performance graphics</a>
+                                        </li>
+                                    </ul>
+                                    <h3>Our research</h3> 
+<p>Research within the Computational Science and Engineering theme embeds fundamental developments in algorithms and cutting edge computational modelling within a framework that is guided by end-user pull. We primarily focus on fast, efficient and reliable numerical algorithms for the computational solution of partial differential equations (PDEs), and on the challenge of scale in scientific and information visualization. Members of the theme also contribute to the School’s research into Applied Computing in Biology, Medicine and Health.
+
+<p>In PDEs we have a long-standing international reputation for work on unstructured mesh adaption and mesh quality. Furthermore, in collaboration with both industrial and academic partners, this research has resulted in computational techniques, and software, that has been widely applied: in areas such as combustion, lubrication, atmospheric dispersion, river and harbour flows, and many more.
+
+<p>Scientific visualization (scivis), deals largely with numeric data, for example from climate simulation, geophysical surveys or medical scanners, whereas information visualization (infovis) works with discrete/symbolic data, for example relational databases, biological networks, or web logs. Our visualization research offers three main contributions:
+<ul>
+<li>computational topology and other mathematical tools supporting analysis and abstraction, </li>
+<li>graphical interfaces, including large scale displays, for working with and navigating through data, </li>
+<li>systems and software for exploration and analysis of large datasets.</li>
+</ul>
+
+<p>We often have opportunities within the theme, especially for highly motivated graduates with a good first degree (or Masters) in a mathematical, computational or engineering discipline, wishing to undertake studies towards a PhD. Please contact one of us for further information - see below for contact details. Source: <a href="https://institutes.engineering.leeds.ac.uk/computing/research/cse/">old site</a>.</p>
+
+                                    <h3><div id="sc">Scientific Computation</div></h3>
+                                        
+                                    <p>Computational science (also scientific computing or scientific computation (SC)) is a rapidly growing multidisciplinary field that uses advanced computing capabilities to understand and solve complex problems. It is an area of science which spans many disciplines, but at its core it involves the development of models and simulations to understand natural systems. Source: <a href="https://en.wikipedia.org/wiki/Computational_science">wikipedia</a></p>
+
+                                    <p>The members of the SC group are:
+                                    <ul>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/542/Dr_David_Head">David Head</a></li>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/82/Professor_Peter_Jimack">Peter Jimack</a></li>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/643/Dr_Thomas_Ranner">Thomas Ranner</a></li>
+                                    </ul>
+                                    </p>
+                                    <h3>High performance graphics</h3>
+
+                                    <p>
+                                       The <a href="hpg.leeds.ac.uk">high performance graphics group</a> at Leeds studies scientific and information visualization, geometry, modelling, and animation. Source: me.
+                                    </p>
+                                    <p>
+                                    The members of the HPG group are:
+                                    <ul>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/334/Professor_David_Duke">David Duke</a></li>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/499/Dr_Hamish_Carr">Hamish Carr</a></li>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/257/Professor_Roy_Ruddle">Roy Ruddle</a></li>
+                                        <li><a href="https://engineering.leeds.ac.uk/staff/868/Dr_He_Wang">He Wang</a></li>
+                                        <li><a href="http://tianjiashao.com">Tianji Shao</a></li>
+                                        <li><a href="http://twak.org">Tom Kelly</a></li>
+                                    </ul>
+                                    </p>
+                                    <h3>Contact us</h3>
+                                    <p>
+                                        If you are interested in collaborating with us or joining our research team, please contact <a href="https://engineering.leeds.ac.uk/staff/499/Dr_Hamish_Carr">Hamish Carr</a> in the first instance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal code -->
+                    <div class="modal modal-iframe fade" id="crmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <p class="modal-iframe-alert m-a-0">
+                                        <a href="https://applicationtest1.leeds.ac.uk/coursebrochurelightbox">
+                                            <span class="tk-icon tk-icon-alert-info" aria-hidden="true"></span>
+                                            If you are having problems viewing this pop up please click here.
+                                        
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="iframe-container">
+                                        <iframe src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/coursebrochurelightbox.html"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.wrapper-lg-->
+            </main>
+            <div class="site-footer">
+                <div class="site-footer-upper">
+                    <div class="wrapper-lg wrapper-pd">
+                        <div class="site-footer-upper-logos">
+                            <a href="http://www.ecu.ac.uk/equality-charters/athena-swan/">
+                                <img title="" alt="Athena Swan logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAA8CAYAAACHHY8HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REREOTY3RjkwOTVEMTFFNjg5OTQ4QTJENTRBNUUwNjYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REREOTY3RkEwOTVEMTFFNjg5OTQ4QTJENTRBNUUwNjYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEREQ5NjdGNzA5NUQxMUU2ODk5NDhBMkQ1NEE1RTA2NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEREQ5NjdGODA5NUQxMUU2ODk5NDhBMkQ1NEE1RTA2NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlkkjbEAABiUSURBVHja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" height="60" width="110">
+                            </a>
+                            <a href="https://www.rospa.com/">
+                                <img height="60" title="" alt="ROSPA logo" src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/rospa-2018.png">
+                            </a>
+                            <img height="60" title="" alt="AJA logo" src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/aja-2017.jpg">
+                        </div>
+                        <div class="site-footer-upper-social">
+                            <a href="http://www.weibo.com/leedsuniengineering">
+                                <span class="icon-font-text">Weibo</span>
+                                <span class="tk-icon-social-weibo"></span>
+                            </a>
+                            <a href="https://twitter.com/LeedsUniComp">
+                                <span class="icon-font-text">Twitter</span>
+                                <span class="tk-icon-social-twitter"></span>
+                            </a>
+                            <a href="https://www.facebook.com/computingleeds">
+                                <span class="icon-font-text">Facebook</span>
+                                <span class="tk-icon-social-facebook"></span>
+                            </a>
+                            <a href="https://www.instagram.com/engineeringleeds/">
+                                <span class="icon-font-text">Instagram</span>
+                                <span class="tk-icon-social-instagram"></span>
+                            </a>
+                            <a href="https://www.youtube.com/user/engineeringleeds">
+                                <span class="icon-font-text">Youtube</span>
+                                <span class="tk-icon-social-youtube"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer-middle p-t-md p-b-md">
+                    <div class="wrapper-lg wrapper-pd">
+                        <div class="tk-row">
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">Faculty of Engineering</li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/">Faculty of Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/chemical">School of Chemical and Process Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/civil">School of Civil Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/computing">School of Computing</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/electronic">School of Electronic and Electrical Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/mechanical">School of Mechanical Engineering</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">Quicklinks</li>
+                                    <li>
+                                        <a href="http://courses.leeds.ac.uk/">Courses</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://engineering.leeds.ac.uk/scholarships">Scholarships</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/info/201483/working_with_business/20/recruit_our_students">Recruit our students</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/info/20034/faculty_of_engineering/55/women_in_engineering_and_computing">Women in engineering and computing</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://engineering.leeds.ac.uk/info/20034/faculty_of_engineering/19/schools_outreach">Schools outreach</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">For staff</li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/forstaff/homepage/375/services">Services A-Z</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://intranet.engineering.leeds.ac.uk/">Intranet</a>
+                                    </li>
+                                </ul>
+                                <ul class="quicklinks-list">
+                                    <li class="title">For students</li>
+                                    <li>
+                                        <a href="https://minerva.leeds.ac.uk/">Minerva</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://students.leeds.ac.uk/">For Students</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="quicklinks-list">
+                                    <li class="title">University links</li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/info/114000/jobs">Jobs</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/homepage/17/academic_year">Term dates</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/campusmap">Campus map</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.leeds.ac.uk/info/5000/about/131/find_us">Find us</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://alumni.leeds.ac.uk/">Alumni</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer-lower">
+                    <div class="wrapper-lg wrapper-padded">
+                        <ul class="nav">
+                            <li>© 2018 University of Leeds, Leeds, LS2 9JT</li>
+                            <li>
+                                <a href="https://www.leeds.ac.uk/termsandconditions">Terms and conditions</a>
+                            </li>
+                            <li>
+                                <a href="https://www.leeds.ac.uk/accessibility">Accessibility</a>
+                            </li>
+                            <li>
+                                <a href="https://engineering.leeds.ac.uk/privacy">Privacy and cookies</a>
+                            </li>
+                            <li>
+                                <a href="https://www.leeds.ac.uk/foi">Freedom of information</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- .site-footer -->
+        </div>
+        <!-- /$SITE-CONTAINER-->
+        <script type="text/javascript">
+            var GALAXY_SHORTCUT = "/engineering";
+            var PROTOCOL = "https://";
+            var DOMAIN = "engineering.leeds.ac.uk";
+            var SECURE_SERVER = "https://production2.leeds.ac.uk/engineering";
+            var SECURE_JADU_PATH = "https://production2.leeds.ac.uk/engineering/jadu";
+            var USE_TAXONOMY = "";
+            var ASSIGN_ADMINISTRATOR_VIEW = "false";
+            var TAXONOMY_NAME = "IPSV";
+            var BESPOKE_CATEGORY_LIST_NAME = "GalaxiesCL";
+            var is_IIS = "0";
+            var EDITOR_IMAGE_PASTE = "1";
+            var LOCAL_FE_DOMAIN = "engineering.leeds.ac.uk";
+            var SECURE_BLOG_PATH = "";
+            var DATE_INPUT_DAY_MONTH_ORDER = "";
+            var LOCAL_DOMAINS = new Array();
+            LOCAL_DOMAINS[0] = "production2.leeds.ac.uk/engineering";
+        </script>
+        <script>
+            var AJAX_NEWS_EVENTS = "/site/ajax/ajax-news-events.php";
+            var AJAX_RES_OPPS = "/site/custom_scripts/research-opportunities-index.php";
+            var SEARCH_RESULTS = "/site/custom_scripts/search-results.php";
+        </script>
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/jquery-1.11.3.min.js.download"></script>
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/script.min.js.download"></script>
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/cookieconsent.min.js.download"></script>
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/cookies.min.js.download"></script>
+        <script src="./Artificial Intelligence _ School of Computing _ University of Leeds_files/dev.js.download"></script>
+        <script>
+
+            $(function() {
+                // execute/clear BS loaders for docs
+                if (window.BS && window.BS.loader && window.BS.loader.length) {
+                    while (BS.loader.length) {
+                        (BS.loader.pop())()
+                    }
+                }
+            });
+
+            if (typeof cookieConsent !== "undefined") {
+                //Cookies compliance
+                cookieConsent.init({
+                    url: '/privacy/',
+                    google: true,
+                    facebook: true
+                });
+            }
+        </script>
+    </body>
+</html>
